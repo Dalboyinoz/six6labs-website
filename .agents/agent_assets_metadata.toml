@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "qe9LfbXFfNCDVzyWxriMS"
+uri = "file://artifacts/six6-labs/public/images/redlands.png"
+type = "image"
+title = "Transport platform abstract tech visualization"
+
+[[generated]]
+id = "oZxQaPVoMSxy33cANpH9G"
+uri = "file://artifacts/six6-labs/public/images/scopo.png"
+type = "image"
+title = "CRM workflow abstract tech visualization"
+
+[[generated]]
+id = "gDzJbTwLFsVyhC_t4Ab-Z"
+uri = "file://artifacts/six6-labs/public/images/appro.png"
+type = "image"
+title = "Real estate smart tools visualization"
