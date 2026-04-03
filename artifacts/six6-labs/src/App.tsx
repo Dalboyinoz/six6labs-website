@@ -45,7 +45,7 @@ const products = [
     tag: "Real Estate",
     description: "Smart tools for real estate agents delivering actionable open home insights and lead management.",
     status: "In Development",
-    iconSrc: "/images/appro-icon.png",
+    iconSrc: "/images/appro-icon-v3.png",
     iconSize: 76,
     containerSize: 80,
   },
