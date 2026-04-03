@@ -3,19 +3,19 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
-import { Truck, Wrench, Home, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Truck, Wrench, Home, Mail, MapPin } from "lucide-react";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 14 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }
 };
 
 const stagger = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
 const products = [
@@ -23,7 +23,7 @@ const products = [
     id: "redlands",
     name: "Redlands Rides",
     tag: "Transport",
-    description: "Local transport platform focused on reliability and service. Built for the communities that need it most.",
+    description: "Local transport platform focused on reliability and service. Built for reliability where it matters most.",
     status: "Beta",
     Icon: Truck,
   },
@@ -31,7 +31,7 @@ const products = [
     id: "scopo",
     name: "ScopO",
     tag: "Trades",
-    description: "CRM and workflow tools built specifically for trade businesses — quoting, scheduling, and client management in one place.",
+    description: "CRM and workflow tools designed for trade businesses — quoting, scheduling, and client management in one place.",
     status: "In Development",
     Icon: Wrench,
   },
@@ -45,6 +45,14 @@ const products = [
   },
 ];
 
+function Divider() {
+  return (
+    <div className="max-w-5xl mx-auto px-6">
+      <div className="h-px bg-border" />
+    </div>
+  );
+}
+
 function HomePage() {
   return (
     <div className="min-h-screen w-full bg-background text-foreground overflow-x-hidden">
@@ -57,11 +65,10 @@ function HomePage() {
           </div>
           <a
             href="mailto:hello@six6labs.com"
-            className="text-sm text-muted-foreground hover:text-accent transition-colors flex items-center gap-1.5 group"
-            data-testid="nav-contact"
+            className="text-xs font-mono text-muted-foreground hover:text-accent transition-colors"
+            data-testid="nav-email"
           >
-            Contact
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+            hello@six6labs.com
           </a>
         </div>
       </nav>
@@ -69,13 +76,9 @@ function HomePage() {
       {/* Hero */}
       <section className="pt-36 pb-24 px-6" data-testid="hero-section">
         <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-          >
+          <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               <span className="text-xs font-mono text-muted-foreground tracking-widest uppercase">Product Studio</span>
             </motion.div>
 
@@ -89,7 +92,7 @@ function HomePage() {
 
             <motion.p
               variants={fadeUp}
-              className="text-lg text-muted-foreground max-w-xl leading-relaxed"
+              className="text-lg text-muted-foreground max-w-sm leading-relaxed"
               data-testid="hero-subheadline"
             >
               Six6 Labs develops tools and platforms across transport, trades, and local services. We focus on what actually works.
@@ -98,10 +101,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-border"></div>
-      </div>
+      <Divider />
 
       {/* Products */}
       <section className="py-24 px-6" data-testid="products-section">
@@ -113,8 +113,8 @@ function HomePage() {
             variants={stagger}
           >
             <motion.div variants={fadeUp} className="mb-14">
-              <h2 className="text-2xl font-display font-bold text-foreground mb-2">In Development</h2>
-              <p className="text-muted-foreground">Tools built to solve real operational problems.</p>
+              <h2 className="text-2xl font-display font-bold text-foreground mb-2">Current Products</h2>
+              <p className="text-muted-foreground">Platforms we're actively building and refining.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -122,12 +122,12 @@ function HomePage() {
                 <motion.div
                   key={product.id}
                   variants={fadeUp}
-                  className="bg-card rounded-lg p-7 shadow-sm border border-border/60 flex flex-col gap-5 hover:shadow-md transition-shadow duration-200"
+                  className="bg-white rounded-lg p-7 shadow-sm border border-border/50 flex flex-col gap-5 hover:shadow-md transition-shadow duration-200"
                   data-testid={`product-card-${product.id}`}
                 >
                   <div className="flex items-start justify-between">
                     <div className="w-9 h-9 rounded-md bg-accent/10 flex items-center justify-center">
-                      <product.Icon className="w-4.5 h-4.5 text-accent" strokeWidth={1.75} />
+                      <product.Icon className="w-4 h-4 text-accent" strokeWidth={1.75} />
                     </div>
                     <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded">
                       {product.tag}
@@ -140,7 +140,7 @@ function HomePage() {
                   </div>
 
                   <div className="flex items-center gap-2 pt-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                     <span className="text-xs font-mono text-muted-foreground">{product.status}</span>
                   </div>
                 </motion.div>
@@ -150,10 +150,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-border"></div>
-      </div>
+      <Divider />
 
       {/* About */}
       <section className="py-24 px-6" data-testid="about-section">
@@ -163,31 +160,26 @@ function HomePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
-            className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start"
+            className="max-w-2xl"
           >
-            <motion.div variants={fadeUp}>
-              <h2 className="text-2xl font-display font-bold text-foreground mb-6">About Six6 Labs</h2>
-              <p className="text-muted-foreground leading-relaxed" data-testid="about-text">
-                Six6 Labs is the product arm of Six6 Media, focused on building scalable digital tools that solve real operational problems. We engineer practical platforms for industries that keep the world moving.
-              </p>
+            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              <span className="text-xs font-mono text-muted-foreground tracking-widest uppercase">About</span>
             </motion.div>
-
-            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4">
-              <div className="bg-card border border-border/60 rounded-lg p-6">
-                <div className="text-3xl font-display font-bold text-foreground mb-1">03</div>
-                <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Core Platforms</div>
-              </div>
-              <div className="bg-card border border-border/60 rounded-lg p-6">
-                <div className="text-3xl font-display font-bold text-accent mb-1">100%</div>
-                <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Utility Focus</div>
-              </div>
-            </motion.div>
+            <motion.h2 variants={fadeUp} className="text-2xl font-display font-bold text-foreground mb-6">
+              About Six6 Labs
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed" data-testid="about-text">
+              Six6 Labs is the product arm of Six6 Media, focused on building scalable digital tools that solve real operational problems. We engineer practical platforms for industries that keep the world moving.
+            </motion.p>
           </motion.div>
         </div>
       </section>
 
+      <Divider />
+
       {/* Footer */}
-      <footer className="border-t border-border py-10 px-6" data-testid="footer">
+      <footer className="py-10 px-6" data-testid="footer">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-sm font-display font-semibold text-muted-foreground">
             Six6<span className="text-foreground">Labs</span>
