@@ -63,7 +63,7 @@ const products = [
     icon: approIcon,
     iconBg: "",
     iconStyle: {
-      backgroundImage: `url(${approIcon})`,
+      backgroundImage: "url(/images/appro-icon.png)",
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
@@ -154,7 +154,7 @@ function HomePage() {
                 >
                   <div className="flex items-start justify-between">
                     <div
-                      className={`w-12 h-12 rounded-xl overflow-hidden border border-border/30 ${product.iconBg}`}
+                      className={`w-16 h-16 rounded-2xl overflow-hidden border border-border/30 ${product.iconBg}`}
                       style={product.iconStyle}
                       role="img"
                       aria-label={`${product.name} icon`}
