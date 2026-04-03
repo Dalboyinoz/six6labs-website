@@ -32,7 +32,7 @@ const products = [
     iconBg: "",
     iconStyle: {
       backgroundImage: "url(/images/redlands-icon.png)",
-      backgroundSize: "cover",
+      backgroundSize: "80%",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundColor: "#ffffff",
@@ -48,7 +48,7 @@ const products = [
     iconBg: "",
     iconStyle: {
       backgroundImage: "url(/images/scopo-icon.png)",
-      backgroundSize: "cover",
+      backgroundSize: "80%",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundColor: "#ffffff",
@@ -64,7 +64,7 @@ const products = [
     iconBg: "",
     iconStyle: {
       backgroundImage: "url(/images/appro-icon.png)",
-      backgroundSize: "contain",
+      backgroundSize: "80%",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundColor: "#ffffff",
