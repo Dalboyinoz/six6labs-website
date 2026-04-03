@@ -3,8 +3,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
-import { Truck, Wrench, Home, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import NotFound from "@/pages/not-found";
+import redlandsIcon from "@assets/Redlands_rides_Window_Sticker_1775239108193.png";
+import scopoIcon from "@assets/ScopeO_app_icons_on_white_background_1775239060865.png";
+import approIcon from "@assets/Minimalist__A__logo_with_gradient_ring_1775239067549.png";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +28,15 @@ const products = [
     tag: "Transport",
     description: "Local transport platform focused on reliability and service. Built for reliability where it matters most.",
     status: "Beta",
-    Icon: Truck,
+    icon: redlandsIcon,
+    iconBg: "",
+    iconStyle: {
+      backgroundImage: `url(${redlandsIcon})`,
+      backgroundSize: "contain",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundColor: "#ffffff",
+    },
   },
   {
     id: "scopo",
@@ -33,7 +44,15 @@ const products = [
     tag: "Trades",
     description: "CRM and workflow tools designed for trade businesses — quoting, scheduling, and client management in one place.",
     status: "In Development",
-    Icon: Wrench,
+    icon: scopoIcon,
+    iconBg: "",
+    iconStyle: {
+      backgroundImage: "url(/images/scopo-icon.png)",
+      backgroundSize: "contain",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundColor: "#ffffff",
+    },
   },
   {
     id: "appro",
@@ -41,7 +60,15 @@ const products = [
     tag: "Real Estate",
     description: "Smart tools for real estate agents delivering actionable open home insights and lead management.",
     status: "In Development",
-    Icon: Home,
+    icon: approIcon,
+    iconBg: "",
+    iconStyle: {
+      backgroundImage: `url(${approIcon})`,
+      backgroundSize: "contain",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundColor: "#07071a",
+    },
   },
 ];
 
@@ -126,9 +153,12 @@ function HomePage() {
                   data-testid={`product-card-${product.id}`}
                 >
                   <div className="flex items-start justify-between">
-                    <div className="w-9 h-9 rounded-md bg-accent/10 flex items-center justify-center">
-                      <product.Icon className="w-4 h-4 text-accent" strokeWidth={1.75} />
-                    </div>
+                    <div
+                      className={`w-12 h-12 rounded-xl overflow-hidden border border-border/30 ${product.iconBg}`}
+                      style={product.iconStyle}
+                      role="img"
+                      aria-label={`${product.name} icon`}
+                    />
                     <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded">
                       {product.tag}
                     </span>
