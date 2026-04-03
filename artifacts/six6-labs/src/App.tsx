@@ -26,7 +26,7 @@ const products = [
     description: "Local transport platform focused on reliability and service. Built for reliability where it matters most.",
     status: "Beta",
     iconSrc: "/images/redlands-icon.png",
-    iconSize: 52,
+    iconSize: 66,
   },
   {
     id: "scopo",
@@ -35,7 +35,7 @@ const products = [
     description: "CRM and workflow tools designed for trade businesses — quoting, scheduling, and client management in one place.",
     status: "In Development",
     iconSrc: "/images/scopo-icon.png",
-    iconSize: 52,
+    iconSize: 66,
   },
   {
     id: "appro",
@@ -44,7 +44,7 @@ const products = [
     description: "Smart tools for real estate agents delivering actionable open home insights and lead management.",
     status: "In Development",
     iconSrc: "/images/appro-icon.png",
-    iconSize: 60,
+    iconSize: 76,
   },
 ];
 
@@ -129,7 +129,7 @@ function HomePage() {
                   data-testid={`product-card-${product.id}`}
                 >
                   <div className="flex items-start justify-between">
-                    <div className="w-16 h-16 rounded-xl border border-border/30 bg-white overflow-hidden shrink-0 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-xl border border-border/30 bg-white overflow-hidden shrink-0 flex items-center justify-center">
                       <img
                         src={product.iconSrc}
                         alt={`${product.name} icon`}
