@@ -48,7 +48,7 @@ const products = [
     iconBg: "",
     iconStyle: {
       backgroundImage: "url(/images/scopo-icon.png)",
-      backgroundSize: "contain",
+      backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundColor: "#ffffff",
@@ -64,10 +64,10 @@ const products = [
     iconBg: "",
     iconStyle: {
       backgroundImage: `url(${approIcon})`,
-      backgroundSize: "contain",
+      backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
-      backgroundColor: "#07071a",
+      backgroundColor: "#ffffff",
     },
   },
 ];
