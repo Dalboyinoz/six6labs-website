@@ -199,9 +199,12 @@ function HomePage() {
             <motion.h2 variants={fadeUp} className="text-2xl font-display font-bold text-foreground mb-6">
               About Six6 Labs
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-muted-foreground leading-relaxed" data-testid="about-text">
-              Six6 Labs is the product arm of Six6 Media, focused on building scalable digital tools that solve real operational problems. We engineer practical platforms for industries that keep the world moving.
-            </motion.p>
+            <motion.div variants={fadeUp} className="flex flex-col gap-5 text-muted-foreground leading-relaxed" data-testid="about-text">
+              <p>Six6 Labs is the product arm of Six6 Media, built from real-world experience.</p>
+              <p>After years working directly with businesses across hospitality, trades, and local services, we saw the same problems repeat — inefficient systems, disconnected tools, and solutions that didn't reflect how people actually work.</p>
+              <p>Six6 Labs exists to fix that.</p>
+              <p>We build practical digital platforms designed around real operations — not theory. Tools that are simple, reliable, and built to solve the problems businesses deal with every day.</p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
