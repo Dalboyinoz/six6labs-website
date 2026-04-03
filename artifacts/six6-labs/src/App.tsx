@@ -5,9 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
 import { Mail, MapPin } from "lucide-react";
 import NotFound from "@/pages/not-found";
-import redlandsIcon from "@assets/Redlands_rides_Window_Sticker_1775239108193.png";
-import scopoIcon from "@assets/ScopeO_app_icons_on_white_background_1775239060865.png";
-import approIcon from "@assets/Minimalist__A__logo_with_gradient_ring_1775239067549.png";
 
 const queryClient = new QueryClient();
 
@@ -28,15 +25,7 @@ const products = [
     tag: "Transport",
     description: "Local transport platform focused on reliability and service. Built for reliability where it matters most.",
     status: "Beta",
-    icon: redlandsIcon,
-    iconBg: "",
-    iconStyle: {
-      backgroundImage: "url(/images/redlands-icon.png)",
-      backgroundSize: "80%",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundColor: "#ffffff",
-    },
+    iconSrc: "/images/redlands-icon.png",
   },
   {
     id: "scopo",
@@ -44,15 +33,7 @@ const products = [
     tag: "Trades",
     description: "CRM and workflow tools designed for trade businesses — quoting, scheduling, and client management in one place.",
     status: "In Development",
-    icon: scopoIcon,
-    iconBg: "",
-    iconStyle: {
-      backgroundImage: "url(/images/scopo-icon.png)",
-      backgroundSize: "80%",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundColor: "#ffffff",
-    },
+    iconSrc: "/images/scopo-icon.png",
   },
   {
     id: "appro",
@@ -60,15 +41,7 @@ const products = [
     tag: "Real Estate",
     description: "Smart tools for real estate agents delivering actionable open home insights and lead management.",
     status: "In Development",
-    icon: approIcon,
-    iconBg: "",
-    iconStyle: {
-      backgroundImage: "url(/images/appro-icon.png)",
-      backgroundSize: "80%",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundColor: "#ffffff",
-    },
+    iconSrc: "/images/appro-icon.png",
   },
 ];
 
@@ -153,12 +126,13 @@ function HomePage() {
                   data-testid={`product-card-${product.id}`}
                 >
                   <div className="flex items-start justify-between">
-                    <div
-                      className={`w-16 h-16 rounded-2xl overflow-hidden border border-border/30 ${product.iconBg}`}
-                      style={product.iconStyle}
-                      role="img"
-                      aria-label={`${product.name} icon`}
-                    />
+                    <div className="w-16 h-16 rounded-xl border border-border/30 bg-white flex items-center justify-center p-2 shrink-0">
+                      <img
+                        src={product.iconSrc}
+                        alt={`${product.name} icon`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                     <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded">
                       {product.tag}
                     </span>
