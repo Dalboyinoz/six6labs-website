@@ -31,8 +31,8 @@ const products = [
     icon: redlandsIcon,
     iconBg: "",
     iconStyle: {
-      backgroundImage: `url(${redlandsIcon})`,
-      backgroundSize: "contain",
+      backgroundImage: "url(/images/redlands-icon.png)",
+      backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundColor: "#ffffff",
@@ -64,10 +64,10 @@ const products = [
     iconBg: "",
     iconStyle: {
       backgroundImage: "url(/images/appro-icon.png)",
-      backgroundSize: "cover",
+      backgroundSize: "130%",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
-      backgroundColor: "#ffffff",
+      backgroundColor: "#0c0c1a",
     },
   },
 ];
