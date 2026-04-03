@@ -64,10 +64,10 @@ const products = [
     iconBg: "",
     iconStyle: {
       backgroundImage: "url(/images/appro-icon.png)",
-      backgroundSize: "130%",
+      backgroundSize: "contain",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
-      backgroundColor: "#0c0c1a",
+      backgroundColor: "#ffffff",
     },
   },
 ];
