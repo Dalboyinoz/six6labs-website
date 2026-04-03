@@ -27,6 +27,7 @@ const products = [
     status: "Beta",
     iconSrc: "/images/redlands-icon.png",
     iconSize: 66,
+    containerSize: 80,
   },
   {
     id: "scopo",
@@ -36,6 +37,7 @@ const products = [
     status: "In Development",
     iconSrc: "/images/scopo-icon.png",
     iconSize: 66,
+    containerSize: 80,
   },
   {
     id: "appro",
@@ -44,7 +46,8 @@ const products = [
     description: "Smart tools for real estate agents delivering actionable open home insights and lead management.",
     status: "In Development",
     iconSrc: "/images/appro-icon.png",
-    iconSize: 76,
+    iconSize: 90,
+    containerSize: 96,
   },
 ];
 
@@ -129,7 +132,10 @@ function HomePage() {
                   data-testid={`product-card-${product.id}`}
                 >
                   <div className="flex items-start justify-between">
-                    <div className="w-20 h-20 rounded-xl border border-border/30 bg-white overflow-hidden shrink-0 flex items-center justify-center">
+                    <div
+                      className="rounded-xl border border-border/30 bg-white overflow-hidden shrink-0 flex items-center justify-center"
+                      style={{ width: product.containerSize, height: product.containerSize }}
+                    >
                       <img
                         src={product.iconSrc}
                         alt={`${product.name} icon`}
