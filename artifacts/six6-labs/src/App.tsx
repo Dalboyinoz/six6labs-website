@@ -173,24 +173,51 @@ function HomePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
-            className="max-w-xl"
+            className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start"
           >
-            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-              <span className="text-xs font-mono text-muted-foreground tracking-widest uppercase">About</span>
-            </motion.div>
-            <motion.h2 variants={fadeUp} className="text-2xl font-display font-bold text-foreground mb-2">
-              About Six6 Labs
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-sm font-mono text-muted-foreground mb-6">
-              Built from real-world experience.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-col gap-5 text-muted-foreground leading-relaxed" data-testid="about-text">
-              <p>I build practical digital products from real-world business experience.</p>
-              <p>After years working directly with businesses across hospitality, trades, and local services, I kept seeing the same problems — disconnected systems, inefficient workflows, and tools that didn't reflect how people actually work.</p>
-              <p>So I started building solutions.</p>
-              <p>Through Six6 Labs, I develop platforms designed around real operations — simple, reliable, and built to solve everyday business problems.</p>
-              <p className="text-xs font-mono text-muted-foreground/70">Based in Redlands Coast, QLD.</p>
+            {/* Left: About */}
+            <div>
+              <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                <span className="text-xs font-mono text-muted-foreground tracking-widest uppercase">About</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-2xl font-display font-bold text-foreground mb-2">
+                About Six6 Labs
+              </motion.h2>
+              <motion.p variants={fadeUp} className="text-sm font-mono text-muted-foreground mb-6">
+                Built from real-world experience.
+              </motion.p>
+              <motion.div variants={fadeUp} className="flex flex-col gap-5 text-muted-foreground leading-relaxed" data-testid="about-text">
+                <p>I build practical digital products from real-world business experience.</p>
+                <p>After years working directly with businesses across hospitality, trades, and local services, I kept seeing the same problems — disconnected systems, inefficient workflows, and tools that didn't reflect how people actually work.</p>
+                <p>So I started building solutions.</p>
+                <p>Through Six6 Labs, I develop platforms designed around real operations — simple, reliable, and built to solve everyday business problems.</p>
+                <p className="text-xs font-mono text-muted-foreground/70">Based in Redlands Coast, QLD.</p>
+              </motion.div>
+            </div>
+
+            {/* Right: Contact */}
+            <motion.div variants={fadeUp} className="md:pt-16">
+              <div className="bg-white border border-border/50 rounded-lg p-8 shadow-sm flex flex-col gap-5">
+                <h3 className="text-lg font-display font-semibold text-foreground">Let's connect</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  If you're building something, or just want to chat about ideas — feel free to reach out.
+                </p>
+                <a
+                  href="mailto:hello@six6labs.com"
+                  className="text-sm font-mono text-accent hover:underline underline-offset-4 transition-colors"
+                  data-testid="contact-email"
+                >
+                  hello@six6labs.com
+                </a>
+                <a
+                  href="mailto:hello@six6labs.com"
+                  className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground transition-colors mt-1"
+                  data-testid="contact-cta"
+                >
+                  Send a message →
+                </a>
+              </div>
             </motion.div>
           </motion.div>
         </div>
