@@ -198,10 +198,10 @@ function HomePage() {
 
             {/* Right: Contact */}
             <motion.div variants={fadeUp} className="md:pt-16">
-              <div className="bg-white border border-border/50 rounded-lg p-8 shadow-sm flex flex-col gap-5">
+              <div className="bg-white border border-border/50 rounded-lg p-10 shadow-sm flex flex-col gap-5">
                 <h3 className="text-lg font-display font-semibold text-foreground">Let's connect</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  If you're building something, or just want to chat about ideas — feel free to reach out.
+                  If you're building something, or just want to talk through an idea — feel free to reach out.
                 </p>
                 <a
                   href="mailto:hello@six6labs.com"
