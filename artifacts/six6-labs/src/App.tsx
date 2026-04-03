@@ -173,20 +173,24 @@ function HomePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
-            className="max-w-2xl"
+            className="max-w-xl"
           >
             <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               <span className="text-xs font-mono text-muted-foreground tracking-widest uppercase">About</span>
             </motion.div>
-            <motion.h2 variants={fadeUp} className="text-2xl font-display font-bold text-foreground mb-6">
+            <motion.h2 variants={fadeUp} className="text-2xl font-display font-bold text-foreground mb-2">
               About Six6 Labs
             </motion.h2>
+            <motion.p variants={fadeUp} className="text-sm font-mono text-muted-foreground mb-6">
+              Built from real-world experience.
+            </motion.p>
             <motion.div variants={fadeUp} className="flex flex-col gap-5 text-muted-foreground leading-relaxed" data-testid="about-text">
-              <p>I build practical digital products based on real-world business experience.</p>
+              <p>I build practical digital products from real-world business experience.</p>
               <p>After years working directly with businesses across hospitality, trades, and local services, I kept seeing the same problems — disconnected systems, inefficient workflows, and tools that didn't reflect how people actually work.</p>
               <p>So I started building solutions.</p>
               <p>Through Six6 Labs, I develop platforms designed around real operations — simple, reliable, and built to solve everyday business problems.</p>
+              <p className="text-xs font-mono text-muted-foreground/70">Based in Redlands Coast, QLD.</p>
             </motion.div>
           </motion.div>
         </div>
