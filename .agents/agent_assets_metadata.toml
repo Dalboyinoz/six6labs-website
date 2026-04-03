@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "qe9LfbXFfNCDVzyWxriMS"
@@ -18,3 +17,9 @@ id = "gDzJbTwLFsVyhC_t4Ab-Z"
 uri = "file://artifacts/six6-labs/public/images/appro.png"
 type = "image"
 title = "Real estate smart tools visualization"
+
+[[outputs]]
+id = "eNwWt36AkMXM8peSELfxD"
+uri = "file://six6labs-hostinger.tar.gz"
+type = "unspecified"
+title = "Six6 Labs — Hostinger Upload Package"
