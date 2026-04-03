@@ -33,7 +33,7 @@ function Home() {
             Six6<span className="text-accent">Labs</span>
           </div>
           <a 
-            href="mailto:hello@six6labs.com.au" 
+            href="mailto:hello@six6labs.com" 
             className="text-sm font-medium tracking-wide text-white hover:text-accent transition-colors flex items-center gap-2 group"
             data-testid="nav-contact"
           >
@@ -252,12 +252,12 @@ function Home() {
           
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 text-sm text-zinc-500 font-mono">
             <a 
-              href="mailto:hello@six6labs.com.au" 
+              href="mailto:hello@six6labs.com" 
               className="hover:text-accent transition-colors flex items-center gap-2"
               data-testid="footer-email"
             >
               <Mail className="w-4 h-4" />
-              hello@six6labs.com.au
+              hello@six6labs.com
             </a>
             <div className="flex items-center gap-2" data-testid="footer-location">
               <MapPin className="w-4 h-4" />
