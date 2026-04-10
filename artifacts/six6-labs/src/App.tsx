@@ -370,7 +370,7 @@ function ProductPage() {
             variants={stagger}
           >
             <motion.h2 variants={fadeUp} className="text-xl font-display font-bold text-foreground mb-8">
-              What it helps you do
+              Designed for real-world agents
             </motion.h2>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
               {product.features.map((feature, i) => (
