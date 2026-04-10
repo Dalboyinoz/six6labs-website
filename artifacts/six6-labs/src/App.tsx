@@ -58,7 +58,11 @@ const products = [
     ],
     featuresHeading: "Built for the way tradies work",
     closingLine: "Manage your workflow from enquiry through to completed job.",
-    screenshots: [],
+    screenshots: [
+      { src: "/images/scopo/scopo-screen-1.png", caption: "Dashboard overview" },
+      { src: "/images/scopo/scopo-screen-2.png", caption: "Job pipeline" },
+      { src: "/images/scopo/scopo-screen-3.png", caption: "Schedule and timeline" },
+    ],
   },
   {
     id: "appro",
