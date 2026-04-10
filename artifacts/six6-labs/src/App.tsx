@@ -50,9 +50,10 @@ const products = [
     containerSize: 80,
     features: [
       "Keep every job organised from first contact to completion",
-      "Job scheduling with simple calendar view",
-      "Client history and communication log",
-      "Follow-up reminders that don't get ignored",
+      "Keep all client details and communication in one place",
+      "Schedule jobs with a simple, clear calendar",
+      "Stay on top of follow-ups so nothing slips through",
+      "Keep your entire workflow in one place",
     ],
     closingLine: "",
     screenshots: [],
