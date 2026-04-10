@@ -35,6 +35,7 @@ const products = [
       "Built for local reliability, not scale",
       "Transparent pricing, no surge model",
     ],
+    featuresHeading: "Built for local reliability",
     closingLine: "",
     screenshots: [],
   },
@@ -55,6 +56,7 @@ const products = [
       "Stay on top of follow-ups so nothing slips through",
       "Keep your entire workflow in one place",
     ],
+    featuresHeading: "Built for the way tradies work",
     closingLine: "Manage your workflow from enquiry through to completed job.",
     screenshots: [],
   },
@@ -75,6 +77,7 @@ const products = [
       "Stay on top of every lead without relying on memory",
       "Keep everything in one place",
     ],
+    featuresHeading: "Designed for real-world agents",
     closingLine: "Build a clearer pipeline from appraisal to sale.",
     screenshots: [
       { src: "/images/appro/appro-screen-1.png", caption: "Appraisals dashboard" },
@@ -380,7 +383,7 @@ function ProductPage() {
             variants={stagger}
           >
             <motion.h2 variants={fadeUp} className="text-xl font-display font-bold text-foreground mb-8">
-              Designed for real-world agents
+              {product.featuresHeading}
             </motion.h2>
             <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
               {product.features.map((feature, i) => (
