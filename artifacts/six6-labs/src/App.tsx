@@ -55,7 +55,7 @@ const products = [
       "Stay on top of follow-ups so nothing slips through",
       "Keep your entire workflow in one place",
     ],
-    closingLine: "",
+    closingLine: "Manage your workflow from enquiry through to completed job.",
     screenshots: [],
   },
   {
