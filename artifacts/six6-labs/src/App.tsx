@@ -69,6 +69,7 @@ const products = [
       "Turn conversations into real follow-up opportunities",
       "Stay on top of leads without relying on memory",
       "Keep everything organised in one place",
+      "One system from appraisal through to open home",
     ],
   },
 ];
