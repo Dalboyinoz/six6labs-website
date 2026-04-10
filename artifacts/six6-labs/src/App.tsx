@@ -35,6 +35,7 @@ const products = [
       "Built for local reliability, not scale",
       "Transparent pricing, no surge model",
     ],
+    screenshots: [],
   },
   {
     id: "scopo",
@@ -52,6 +53,7 @@ const products = [
       "Client history and communication log",
       "Follow-up reminders that don't get ignored",
     ],
+    screenshots: [],
   },
   {
     id: "appro",
@@ -70,6 +72,11 @@ const products = [
       "Stay on top of leads without relying on memory",
       "Keep everything organised in one place",
       "One system from appraisal through to open home",
+    ],
+    screenshots: [
+      { src: "/images/appro/appro-screen-1.png", caption: "Appraisals dashboard" },
+      { src: "/images/appro/appro-screen-2.png", caption: "AI-generated property summary" },
+      { src: "/images/appro/appro-screen-3.png", caption: "Open home tracking and insights" },
     ],
   },
 ];
@@ -398,16 +405,33 @@ function ProductPage() {
             <motion.h2 variants={fadeUp} className="text-xl font-display font-bold text-foreground mb-8">
               Screenshots
             </motion.h2>
-            <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {[1, 2, 3].map((n) => (
-                <div
-                  key={n}
-                  className="aspect-video bg-muted rounded-lg border border-border/50 flex items-center justify-center"
-                >
-                  <span className="text-xs font-mono text-muted-foreground/50">Coming soon</span>
-                </div>
-              ))}
-            </motion.div>
+            {product.screenshots.length > 0 ? (
+              <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {product.screenshots.map((shot, i) => (
+                  <div key={i} className="flex flex-col gap-2">
+                    <div className="rounded-lg border border-border/50 overflow-hidden shadow-sm bg-white">
+                      <img
+                        src={shot.src}
+                        alt={shot.caption}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                    <span className="text-xs font-mono text-muted-foreground text-center">{shot.caption}</span>
+                  </div>
+                ))}
+              </motion.div>
+            ) : (
+              <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[1, 2, 3].map((n) => (
+                  <div
+                    key={n}
+                    className="aspect-video bg-muted rounded-lg border border-border/50 flex items-center justify-center"
+                  >
+                    <span className="text-xs font-mono text-muted-foreground/50">Coming soon</span>
+                  </div>
+                ))}
+              </motion.div>
+            )}
           </motion.div>
         </div>
       </section>
