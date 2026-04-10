@@ -1,0 +1,46 @@
+name: Deploy Six6 Labs to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'artifacts/six6-labs/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        run: pnpm --filter @workspace/six6-labs run build
+        env:
+          PORT: 3000
+          BASE_PATH: /
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: artifacts/six6-labs/dist/public/
+          server-dir: /public_html/
+          dangerous-clean-slate: false
