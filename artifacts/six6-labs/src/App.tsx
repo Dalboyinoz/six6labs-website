@@ -64,10 +64,11 @@ const products = [
     iconSize: 76,
     containerSize: 80,
     features: [
-      "Open home attendance capture and reporting",
-      "Lead tracking from first inspection to contract",
-      "Actionable insights from inspection feedback",
-      "Simple follow-up workflow for busy agents",
+      "Capture appraisal details quickly and consistently",
+      "Know exactly who came through your open homes",
+      "Turn conversations into real follow-up opportunities",
+      "Stay on top of leads without relying on memory",
+      "Keep everything organised in one place",
     ],
   },
 ];
