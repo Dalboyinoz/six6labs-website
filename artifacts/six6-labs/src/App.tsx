@@ -72,7 +72,7 @@ const products = [
       "Know exactly who came through your open homes",
       "Turn conversations into real follow-up opportunities",
       "Stay on top of every lead without relying on memory",
-      "Keep everything organised in one place",
+      "Keep everything in one place",
     ],
     closingLine: "Build a clearer pipeline from appraisal to sale.",
     screenshots: [
