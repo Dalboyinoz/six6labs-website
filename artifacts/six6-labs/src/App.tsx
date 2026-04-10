@@ -62,7 +62,7 @@ const products = [
     name: "ApprO",
     tag: "Real Estate",
     description: "Smart tools for real estate agents delivering actionable open home insights and lead management.",
-    extendedDescription: "ApprO gives real estate agents a smarter way to manage appraisals and open home data.\n\nNo more spreadsheets. No more follow-up guesswork.\nFrom the first appraisal through to open homes, everything is captured, structured, and ready to act on — all in one place.",
+    extendedDescription: "ApprO gives real estate agents a smarter way to handle appraisals and open home data.\n\nNo more spreadsheets. No more follow-up guesswork.\nFrom the first appraisal through to open homes, everything is captured, structured, and ready to act on — all in one place.",
     status: "In Development",
     iconSrc: "/images/appro-icon-v4.png",
     iconSize: 76,
