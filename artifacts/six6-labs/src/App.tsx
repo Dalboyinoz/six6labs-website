@@ -58,7 +58,7 @@ const products = [
     name: "ApprO",
     tag: "Real Estate",
     description: "Smart tools for real estate agents delivering actionable open home insights and lead management.",
-    extendedDescription: "ApprO gives real estate agents a better way to capture and act on open home data. Instead of spreadsheets and follow-up guesswork, ApprO surfaces insights from inspections and helps agents manage leads in one place.",
+    extendedDescription: "ApprO gives real estate agents a smarter way to manage appraisals and open home data.\n\nNo more spreadsheets. No more follow-up guesswork.\nFrom the first appraisal through to open homes, everything is captured, structured, and ready to act on — all in one place.",
     status: "In Development",
     iconSrc: "/images/appro-icon-v4.png",
     iconSize: 76,
@@ -343,9 +343,15 @@ function ProductPage() {
               </div>
             </motion.div>
 
-            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              {product.extendedDescription}
-            </motion.p>
+            <motion.div variants={fadeUp} className="text-lg text-muted-foreground max-w-2xl leading-relaxed flex flex-col gap-3">
+              {product.extendedDescription.split("\n\n").map((para, i) => (
+                <p key={i}>
+                  {para.split("\n").map((line, j, arr) => (
+                    <span key={j}>{line}{j < arr.length - 1 && <br />}</span>
+                  ))}
+                </p>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </section>
