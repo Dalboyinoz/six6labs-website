@@ -43,7 +43,7 @@ const products = [
     name: "ScopO",
     tag: "Trades",
     description: "CRM and workflow tools designed for trade businesses — quoting, scheduling, and client management in one place.",
-    extendedDescription: "ScopO gives trade businesses the tools to run their operations without the overhead. From quoting to scheduling to following up with clients — it's designed around how tradies actually work, not how software companies think they work.",
+    extendedDescription: "ScopO gives tradies a simpler way to run their business.\n\nFrom job tracking to scheduling to following up with clients — everything in one place, built around how work actually happens on-site.",
     status: "In Development",
     iconSrc: "/images/scopo-icon.png",
     iconSize: 66,
