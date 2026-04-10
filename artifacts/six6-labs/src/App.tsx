@@ -35,6 +35,7 @@ const products = [
       "Built for local reliability, not scale",
       "Transparent pricing, no surge model",
     ],
+    closingLine: "",
     screenshots: [],
   },
   {
@@ -53,6 +54,7 @@ const products = [
       "Client history and communication log",
       "Follow-up reminders that don't get ignored",
     ],
+    closingLine: "",
     screenshots: [],
   },
   {
@@ -69,10 +71,10 @@ const products = [
       "Capture appraisal details quickly and consistently",
       "Know exactly who came through your open homes",
       "Turn conversations into real follow-up opportunities",
-      "Stay on top of leads without relying on memory",
+      "Stay on top of every lead without relying on memory",
       "Keep everything organised in one place",
-      "One system from appraisal through to open home",
     ],
+    closingLine: "Build a clearer pipeline from appraisal to sale.",
     screenshots: [
       { src: "/images/appro/appro-screen-1.png", caption: "Appraisals dashboard" },
       { src: "/images/appro/appro-screen-2.png", caption: "AI-generated property summary" },
@@ -387,6 +389,11 @@ function ProductPage() {
                 </div>
               ))}
             </motion.div>
+            {product.closingLine && (
+              <motion.p variants={fadeUp} className="mt-8 text-sm font-medium text-foreground/70 border-l-2 border-accent pl-4">
+                {product.closingLine}
+              </motion.p>
+            )}
           </motion.div>
         </div>
       </section>
