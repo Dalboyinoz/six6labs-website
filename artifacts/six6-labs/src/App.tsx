@@ -49,7 +49,7 @@ const products = [
     iconSize: 66,
     containerSize: 80,
     features: [
-      "Fast quote creation and tracking",
+      "Keep every job organised from first contact to completion",
       "Job scheduling with simple calendar view",
       "Client history and communication log",
       "Follow-up reminders that don't get ignored",
