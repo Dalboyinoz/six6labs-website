@@ -24,7 +24,7 @@ const products = [
     name: "Redlands Rides",
     tag: "Transport",
     description: "Local transport platform focused on reliability and service. Built for reliability where it matters most.",
-    extendedDescription: "Redlands Rides is a local transport platform built for the Redlands Coast area. It connects passengers with reliable, professional drivers — focused on consistency and service quality over ride-share volume.",
+    extendedDescription: "Redlands Rides is a local transport platform built for the Redlands Coast.\n\nIt connects passengers with reliable, professional drivers — focused on consistency and service quality, not ride-share volume.",
     status: "Beta",
     iconSrc: "/images/redlands-icon.png",
     iconSize: 66,
